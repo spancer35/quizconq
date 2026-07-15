@@ -1,76 +1,334 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - QuizConq</title>
-    <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
-        h1, h2, h3 { color: #2C3E50; }
-        h1 { border-bottom: 2px solid #3498DB; padding-bottom: 10px; }
-        .last-updated { font-style: italic; color: #7F8C8D; margin-bottom: 30px; }
-        .section { margin-bottom: 30px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>QuizConq - Privacy Policy</title>
+
+<style>
+body{
+    font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+    line-height:1.7;
+    color:#333;
+    max-width:850px;
+    margin:0 auto;
+    padding:20px;
+}
+
+.language-switch{
+    display:flex;
+    justify-content:flex-end;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+.language-switch button{
+    padding:8px 18px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    background:#3498DB;
+    color:white;
+    font-weight:600;
+    transition:.2s;
+}
+
+.language-switch button:hover{
+    background:#2877b7;
+}
+
+h1,h2,h3{
+    color:#2C3E50;
+}
+
+h1{
+    border-bottom:2px solid #3498DB;
+    padding-bottom:10px;
+}
+
+.last-updated{
+    font-style:italic;
+    color:#7F8C8D;
+    margin-bottom:30px;
+}
+
+.section{
+    margin-bottom:30px;
+}
+
+.lang{
+    display:none;
+}
+
+.lang.active{
+    display:block;
+}
+</style>
 </head>
 <body>
-    <h1>Privacy Policy for QuizConq</h1>
-    <p class="last-updated">Last Updated: February 2026</p>
 
-    <div class="section">
-        <p>Welcome to QuizConq. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application (the "App"). Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the application.</p>
-    </div>
+<div class="language-switch">
+    <button onclick="changeLanguage('tr')">🇹🇷 TR</button>
+    <button onclick="changeLanguage('en')">🇬🇧 EN</button>
+</div>
 
-    <div class="section">
-        <h2>1. Information We Collect</h2>
-        
-        <h3>Personal Data</h3>
-        <p>When you create an account, we may collect personally identifiable information, such as your name, email address, and profile picture (if provided via third-party login like Google or Apple).</p>
-        
-        <h3>Automatically Collected Data</h3>
-        <p>We may automatically collect device information, such as your mobile device ID, model, and manufacturer, information about the location of your device, and information about your ongoing gameplay and progression.</p>
+<!-- ======================= TURKISH ======================= -->
 
-        <h3>Third-Party Authentication</h3>
-        <p>If you choose to log in using third-party services like Google Sign-In or Apple Sign-In, we collect the necessary authentication tokens and profile information provided by these platforms.</p>
-    </div>
+<div id="tr" class="lang active">
 
-    <div class="section">
-        <h2>2. How We Use Your Information</h2>
-        <p>We use the information we collect to:</p>
-        <ul>
-            <li>Create and manage your account.</li>
-            <li>Provide functionality to the App, including multiplayer matchmaking and leaderboards.</li>
-            <li>Deliver targeted advertising to you.</li>
-            <li>Monitor and analyze usage and trends to improve your experience with the App.</li>
-        </ul>
-    </div>
+<h1>QuizConq Gizlilik Politikası</h1>
 
-    <div class="section">
-        <h2>3. Disclosure of Your Information</h2>
-        <p>We may share your information in certain situations:</p>
-        <ul>
-            <li><strong>Third-Party Service Providers:</strong> We use Firebase for backend services (database, authentication) and AdMob for advertising. These services may collect and process information as detailed in their respective privacy policies.</li>
-            <li><strong>By Law or to Protect Rights:</strong> If we believe the release of information about you is necessary to respond to legal process, to investigate or remedy potential violations of our policies, or to protect the rights, property, and safety of others.</li>
-        </ul>
-    </div>
+<p class="last-updated">Son Güncelleme: Şubat 2026</p>
 
-    <div class="section">
-        <h2>4. Third-Party Advertising (AdMob)</h2>
-        <p>We use Google AdMob to display advertisements in our App. AdMob may use device identifiers and other technologies to collect information about your interactions with the App and other apps to deliver targeted ads. You can manage your ad preferences through your device settings and Google's Ad Center.</p>
-    </div>
+<div class="section">
+<p>
+QuizConq'a hoş geldiniz. Bu Gizlilik Politikası, mobil uygulamamızı ("Uygulama") kullandığınızda bilgilerinizin nasıl toplandığını, kullanıldığını, paylaşıldığını ve korunduğunu açıklamaktadır.
+Lütfen bu politikayı dikkatlice okuyunuz. Bu politikayı kabul etmiyorsanız uygulamayı kullanmayınız.
+</p>
+</div>
 
-    <div class="section">
-        <h2>5. Security of Your Information</h2>
-        <p>We use administrative, technical, and physical security measures to help protect your personal information, primarily relying on Google Firebase's secure infrastructure. However, please be aware that no security measures are perfect or impenetrable.</p>
-    </div>
+<div class="section">
+<h2>1. Topladığımız Bilgiler</h2>
 
-    <div class="section">
-        <h2>6. Policy for Children</h2>
-        <p>We do not knowingly solicit information from or market to children under the age of 13. If you become aware of any data we have collected from children under age 13, please contact us.</p>
-    </div>
+<h3>Kişisel Bilgiler</h3>
 
-    <div class="section">
-        <h2>7. Contact Us</h2>
-        <p>If you have questions or comments about this Privacy Policy, please contact us at: hsyn.ekn@gmail.com</p>
-    </div>
+<p>
+Hesap oluşturduğunuzda adınız, e-posta adresiniz ve profil fotoğrafınız (Google veya Apple ile giriş yapmanız durumunda) gibi kişisel bilgiler toplanabilir.
+</p>
+
+<h3>Otomatik Olarak Toplanan Bilgiler</h3>
+
+<p>
+Cihaz kimliği, cihaz modeli, üreticisi, cihaz konumu ve oyun içi ilerleme ile kullanım bilgileri otomatik olarak toplanabilir.
+</p>
+
+<h3>Üçüncü Taraf Giriş Hizmetleri</h3>
+
+<p>
+Google veya Apple ile giriş yapmayı tercih ederseniz, bu platformların sağladığı kimlik doğrulama bilgileri ve temel profil bilgileriniz alınabilir.
+</p>
+
+</div>
+
+<div class="section">
+
+<h2>2. Bilgilerinizi Nasıl Kullanıyoruz?</h2>
+
+<p>Toplanan bilgiler aşağıdaki amaçlarla kullanılmaktadır:</p>
+
+<ul>
+<li>Hesabınızı oluşturmak ve yönetmek.</li>
+<li>Çok oyunculu eşleştirme ve liderlik tabloları gibi uygulama özelliklerini sunmak.</li>
+<li>Size kişiselleştirilmiş reklamlar göstermek.</li>
+<li>Uygulamanın kullanımını analiz ederek deneyimi geliştirmek.</li>
+</ul>
+
+</div>
+
+<div class="section">
+
+<h2>3. Bilgilerinizin Paylaşılması</h2>
+
+<p>Bilgileriniz aşağıdaki durumlarda paylaşılabilir:</p>
+
+<ul>
+<li><strong>Üçüncü Taraf Hizmet Sağlayıcıları:</strong> Kimlik doğrulama ve veritabanı hizmetleri için Firebase, reklam gösterimi için Google AdMob kullanılmaktadır. Bu hizmetler kendi gizlilik politikaları kapsamında veri işleyebilir.</li>
+
+<li><strong>Yasal Gereklilikler:</strong> Kanuni yükümlülüklerin yerine getirilmesi, haklarımızın korunması veya güvenlik amacıyla gerekli görüldüğünde bilgiler paylaşılabilir.</li>
+
+</ul>
+
+</div>
+
+<div class="section">
+
+<h2>4. Üçüncü Taraf Reklam Hizmeti (Google AdMob)</h2>
+
+<p>
+Uygulamamızda Google AdMob kullanılmaktadır.
+AdMob, ilgi alanlarınıza uygun reklamlar gösterebilmek amacıyla cihaz tanımlayıcıları ve benzeri teknolojiler kullanabilir.
+Reklam tercihlerinizi cihaz ayarlarınızdan veya Google Reklam Merkezi üzerinden yönetebilirsiniz.
+</p>
+
+</div>
+
+<div class="section">
+
+<h2>5. Bilgilerinizin Güvenliği</h2>
+
+<p>
+Kişisel bilgilerinizin korunması için idari, teknik ve fiziksel güvenlik önlemleri uygulanmaktadır.
+Altyapı olarak büyük ölçüde Google Firebase'in güvenli servislerinden yararlanıyoruz.
+Ancak hiçbir güvenlik yöntemi %100 güvenli değildir.
+</p>
+
+</div>
+
+<div class="section">
+
+<h2>6. Çocukların Gizliliği</h2>
+
+<p>
+13 yaşın altındaki çocuklardan bilerek kişisel bilgi toplamıyoruz veya onlara yönelik pazarlama yapmıyoruz.
+Bu yaş grubuna ait veri toplandığını fark ederseniz bizimle iletişime geçebilirsiniz.
+</p>
+
+</div>
+
+<div class="section">
+
+<h2>7. İletişim</h2>
+
+<p>
+Bu Gizlilik Politikası ile ilgili sorularınız için bizimle aşağıdaki e-posta adresi üzerinden iletişime geçebilirsiniz:
+<br><br>
+<strong>hsyn.ekn@gmail.com</strong>
+</p>
+
+</div>
+
+</div>
+
+<!-- ======================= ENGLISH ======================= -->
+
+<div id="en" class="lang">
+
+<h1>Privacy Policy for QuizConq</h1>
+
+<p class="last-updated">Last Updated: February 2026</p>
+
+<div class="section">
+<p>
+Welcome to QuizConq. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application ("App"). Please read this Privacy Policy carefully. If you do not agree with its terms, please do not use the App.
+</p>
+</div>
+
+<div class="section">
+
+<h2>1. Information We Collect</h2>
+
+<h3>Personal Data</h3>
+
+<p>
+When you create an account, we may collect personally identifiable information such as your name, email address, and profile picture (if provided through Google Sign-In or Apple Sign-In).
+</p>
+
+<h3>Automatically Collected Data</h3>
+
+<p>
+We may automatically collect information such as your device ID, device model, manufacturer, approximate location, gameplay statistics, and progression.
+</p>
+
+<h3>Third-Party Authentication</h3>
+
+<p>
+If you choose to sign in with Google or Apple, we receive the authentication credentials and profile information provided by those services.
+</p>
+
+</div>
+
+<div class="section">
+
+<h2>2. How We Use Your Information</h2>
+
+<p>We use the collected information to:</p>
+
+<ul>
+<li>Create and manage your account.</li>
+<li>Provide multiplayer matchmaking and leaderboards.</li>
+<li>Deliver personalized advertisements.</li>
+<li>Analyze usage to improve the App experience.</li>
+</ul>
+
+</div>
+
+<div class="section">
+
+<h2>3. Disclosure of Your Information</h2>
+
+<p>Your information may be shared in the following situations:</p>
+
+<ul>
+
+<li><strong>Third-Party Service Providers:</strong> We use Firebase for backend services and Google AdMob for advertising. These providers may process data according to their own privacy policies.</li>
+
+<li><strong>Legal Requirements:</strong> Information may be disclosed if required by law or necessary to protect rights, property, or safety.</li>
+
+</ul>
+
+</div>
+
+<div class="section">
+
+<h2>4. Third-Party Advertising (Google AdMob)</h2>
+
+<p>
+We use Google AdMob to display advertisements.
+AdMob may use device identifiers and similar technologies to personalize advertisements.
+You can manage your advertising preferences through your device settings or Google's Ad Center.
+</p>
+
+</div>
+
+<div class="section">
+
+<h2>5. Security of Your Information</h2>
+
+<p>
+We implement administrative, technical, and physical safeguards to protect your information and primarily rely on Google's Firebase infrastructure.
+However, no security system is completely secure.
+</p>
+
+</div>
+
+<div class="section">
+
+<h2>6. Children's Privacy</h2>
+
+<p>
+We do not knowingly collect personal information from children under the age of 13.
+If you believe such information has been collected, please contact us.
+</p>
+
+</div>
+
+<div class="section">
+
+<h2>7. Contact Us</h2>
+
+<p>
+If you have any questions regarding this Privacy Policy, please contact us at:
+<br><br>
+<strong>hsyn.ekn@gmail.com</strong>
+</p>
+
+</div>
+
+</div>
+
+<script>
+function changeLanguage(lang){
+
+    document.querySelectorAll('.lang').forEach(el=>{
+        el.classList.remove('active');
+    });
+
+    document.getElementById(lang).classList.add('active');
+
+    document.documentElement.lang = lang;
+
+    localStorage.setItem("quizconq_language",lang);
+}
+
+window.onload=function(){
+
+    const saved = localStorage.getItem("quizconq_language") || "tr";
+
+    changeLanguage(saved);
+
+}
+</script>
+
 </body>
 </html>
