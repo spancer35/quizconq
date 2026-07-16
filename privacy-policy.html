@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,70 +7,122 @@
 <title>QuizConq - Privacy Policy</title>
 
 <style>
-body{
-    font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
-    line-height:1.7;
-    color:#333;
-    max-width:850px;
-    margin:0 auto;
-    padding:20px;
-}
+        :root {
+            color-scheme: light;
+        }
 
-.language-switch{
-    display:flex;
-    justify-content:flex-end;
-    gap:10px;
-    margin-bottom:20px;
-}
+        * {
+            box-sizing: border-box;
+        }
 
-.language-switch button{
-    padding:8px 18px;
-    border:none;
-    border-radius:6px;
-    cursor:pointer;
-    background:#3498DB;
-    color:white;
-    font-weight:600;
-    transition:.2s;
-}
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-.language-switch button:hover{
-    background:#2877b7;
-}
+        .language-switcher-wrapper {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 18px;
+        }
 
-h1,h2,h3{
-    color:#2C3E50;
-}
+        .language-switcher {
+            display: inline-flex;
+            padding: 4px;
+            border: 1px solid #D5DCE2;
+            border-radius: 999px;
+            background: #F4F6F7;
+            box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+        }
 
-h1{
-    border-bottom:2px solid #3498DB;
-    padding-bottom:10px;
-}
+        .language-button {
+            min-width: 52px;
+            padding: 7px 14px;
+            border: 0;
+            border-radius: 999px;
+            background: transparent;
+            color: #5D6D7E;
+            font: inherit;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+        }
 
-.last-updated{
-    font-style:italic;
-    color:#7F8C8D;
-    margin-bottom:30px;
-}
+        .language-button:hover {
+            color: #2C3E50;
+        }
 
-.section{
-    margin-bottom:30px;
-}
+        .language-button.active {
+            background: #3498DB;
+            color: #FFF;
+            box-shadow: 0 2px 5px rgba(52, 152, 219, 0.3);
+        }
 
-.lang{
-    display:none;
-}
+        .language-button:focus-visible {
+            outline: 3px solid rgba(52, 152, 219, 0.35);
+            outline-offset: 2px;
+        }
 
-.lang.active{
-    display:block;
-}
-</style>
+        h1,
+        h2,
+        h3 {
+            color: #2C3E50;
+        }
+
+        h1 {
+            border-bottom: 2px solid #3498DB;
+            padding-bottom: 10px;
+        }
+
+        .last-updated {
+            font-style: italic;
+            color: #7F8C8D;
+            margin-bottom: 30px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        a {
+            color: #2980B9;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+
+            .language-switcher-wrapper {
+                margin-bottom: 12px;
+            }
+
+            h1 {
+                font-size: 1.75rem;
+            }
+        }
+
+        .lang {
+            display: none;
+        }
+
+        .lang.active {
+            display: block;
+        }
+
+    </style>
 </head>
 <body>
 
-<div class="language-switch">
-    <button onclick="changeLanguage('tr')">🇹🇷 TR</button>
-    <button onclick="changeLanguage('en')">🇬🇧 EN</button>
+<div class="language-switcher-wrapper">
+    <div class="language-switcher" role="group" aria-label="Language selection">
+        <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+        <button class="language-button" type="button" data-language="tr" aria-pressed="false">TR</button>
+    </div>
 </div>
 
 <!-- ======================= TURKISH ======================= -->
@@ -308,26 +360,46 @@ If you have any questions regarding this Privacy Policy, please contact us at:
 </div>
 
 <script>
-function changeLanguage(lang){
+const pageTitles = {
+    en: "Privacy Policy - QuizConq",
+    tr: "Gizlilik Politikası - QuizConq"
+};
 
-    document.querySelectorAll('.lang').forEach(el=>{
-        el.classList.remove('active');
+const languageButtons = document.querySelectorAll(".language-button");
+const languageSections = document.querySelectorAll(".lang");
+const switcher = document.querySelector(".language-switcher");
+
+function changeLanguage(language) {
+    const selectedLanguage = language === "tr" ? "tr" : "en";
+
+    languageSections.forEach((section) => {
+        section.classList.toggle("active", section.id === selectedLanguage);
     });
 
-    document.getElementById(lang).classList.add('active');
+    languageButtons.forEach((button) => {
+        const isActive = button.dataset.language === selectedLanguage;
+        button.classList.toggle("active", isActive);
+        button.setAttribute("aria-pressed", String(isActive));
+    });
 
-    document.documentElement.lang = lang;
+    document.documentElement.lang = selectedLanguage;
+    document.title = pageTitles[selectedLanguage];
+    switcher.setAttribute(
+        "aria-label",
+        selectedLanguage === "tr" ? "Dil seçimi" : "Language selection"
+    );
 
-    localStorage.setItem("quizconq_language",lang);
+    localStorage.setItem("quizconq-privacy-language", selectedLanguage);
 }
 
-window.onload=function(){
+languageButtons.forEach((button) => {
+    button.addEventListener("click", () => changeLanguage(button.dataset.language));
+});
 
-    const saved = localStorage.getItem("quizconq_language") || "tr";
+const savedLanguage = localStorage.getItem("quizconq-privacy-language");
+const browserLanguage = navigator.language.toLowerCase().startsWith("tr") ? "tr" : "en";
 
-    changeLanguage(saved);
-
-}
+changeLanguage(savedLanguage || browserLanguage);
 </script>
 
 </body>
