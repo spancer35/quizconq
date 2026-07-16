@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Service - QuizConq</title>
     <style>
+        :root {
+            color-scheme: light;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
@@ -13,6 +21,49 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
+        }
+
+        .language-switcher-wrapper {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 18px;
+        }
+
+        .language-switcher {
+            display: inline-flex;
+            padding: 4px;
+            border: 1px solid #D5DCE2;
+            border-radius: 999px;
+            background: #F4F6F7;
+            box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+        }
+
+        .language-button {
+            min-width: 52px;
+            padding: 7px 14px;
+            border: 0;
+            border-radius: 999px;
+            background: transparent;
+            color: #5D6D7E;
+            font: inherit;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .language-button:hover {
+            color: #2C3E50;
+        }
+
+        .language-button.active {
+            background: #3498DB;
+            color: #FFF;
+            box-shadow: 0 2px 5px rgba(52, 152, 219, 0.3);
+        }
+
+        .language-button:focus-visible {
+            outline: 3px solid rgba(52, 152, 219, 0.35);
+            outline-offset: 2px;
         }
 
         h1,
@@ -35,81 +86,214 @@
         .section {
             margin-bottom: 30px;
         }
+
+        a {
+            color: #2980B9;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+
+            .language-switcher-wrapper {
+                margin-bottom: 12px;
+            }
+
+            h1 {
+                font-size: 1.75rem;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <h1>Terms of Service for QuizConq</h1>
-    <p class="last-updated">Last Updated: February 2026</p>
-
-    <div class="section">
-        <p>Welcome to QuizConq. By downloading, accessing, or using our mobile application (the "App"), you agree to the
-            following Terms of Service. If you do not agree with any part of these terms, please refrain from using the
-            App.</p>
+    <div class="language-switcher-wrapper">
+        <div class="language-switcher" role="group" aria-label="Language selection">
+            <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+            <button class="language-button" type="button" data-language="tr" aria-pressed="false">TR</button>
+        </div>
     </div>
 
-    <div class="section">
-        <h2>1. User Accounts</h2>
-        <p>To access certain features of QuizConq, such as saving progress, multiplayer modes, and leaderboards, you may
-            need to register an account using Apple Sign-In or Google Sign-In.</p>
-        <p>You agree to provide accurate and complete information and keep it up to date. You are solely responsible for
-            maintaining the confidentiality of your account credentials. We are not liable for any unauthorized access
-            to your account.</p>
-    </div>
+    <main>
+        <h1 data-i18n="pageHeading">Terms of Service for QuizConq</h1>
+        <p class="last-updated" data-i18n="lastUpdated">Last Updated: February 2026</p>
 
-    <div class="section">
-        <h2>2. Acceptable Use Policy</h2>
-        <p>While playing QuizConq, you agree NOT to:</p>
-        <ul>
-            <li>Use any cheats, hacks, automation software (bots), or unauthorized third-party software designed to
-                modify or interfere with the App.</li>
-            <li>Harass, threaten, or abuse other players.</li>
-            <li>Use offensive, discriminatory, or inappropriate user names.</li>
-            <li>Exploit bugs or glitches to gain an unfair advantage in gameplay.</li>
-        </ul>
-        <p>We reserve the right to suspend or terminate accounts that violate these rules without prior warning.</p>
-    </div>
+        <div class="section">
+            <p data-i18n="intro">Welcome to QuizConq. By downloading, accessing, or using our mobile application (the
+                "App"), you agree to the following Terms of Service. If you do not agree with any part of these terms,
+                please refrain from using the App.</p>
+        </div>
 
-    <div class="section">
-        <h2>3. Virtual Goods and Currency</h2>
-        <p>The App may include virtual goods or in-game currency ("Virtual Currency"). Virtual Currency has no
-            real-world value and cannot be exchanged for fiat currency or other real-world items. All sales of Virtual
-            Currency or items are final, and we do not provide refunds, unless required by law.</p>
-    </div>
+        <div class="section">
+            <h2 data-i18n="accountsHeading">1. User Accounts</h2>
+            <p data-i18n="accountsParagraph1">To access certain features of QuizConq, such as saving progress,
+                multiplayer modes, and leaderboards, you may need to register an account using Apple Sign-In or Google
+                Sign-In.</p>
+            <p data-i18n="accountsParagraph2">You agree to provide accurate and complete information and keep it up to
+                date. You are solely responsible for maintaining the confidentiality of your account credentials. We
+                are not liable for any unauthorized access to your account.</p>
+        </div>
 
-    <div class="section">
-        <h2>4. Advertising and Content</h2>
-        <p>QuizConq is a free-to-play game supported by advertising via Google AdMob. By using the App, you consent to
-            the display of these advertisements. We do our best to ensure ads are appropriate, but we are not
-            responsible for the content, accuracy, or products offered by third-party advertisers.</p>
-    </div>
+        <div class="section">
+            <h2 data-i18n="acceptableUseHeading">2. Acceptable Use Policy</h2>
+            <p data-i18n="acceptableUseIntro">While playing QuizConq, you agree NOT to:</p>
+            <ul>
+                <li data-i18n="acceptableUseItem1">Use any cheats, hacks, automation software (bots), or unauthorized
+                    third-party software designed to modify or interfere with the App.</li>
+                <li data-i18n="acceptableUseItem2">Harass, threaten, or abuse other players.</li>
+                <li data-i18n="acceptableUseItem3">Use offensive, discriminatory, or inappropriate user names.</li>
+                <li data-i18n="acceptableUseItem4">Exploit bugs or glitches to gain an unfair advantage in gameplay.
+                </li>
+            </ul>
+            <p data-i18n="acceptableUseClosing">We reserve the right to suspend or terminate accounts that violate
+                these rules without prior warning.</p>
+        </div>
 
-    <div class="section">
-        <h2>5. Intellectual Property</h2>
-        <p>All content within QuizConq, including texts, graphics, user interfaces, sounds, and code (collectively,
-            "Content"), is owned or licensed by us and is protected by copyright and intellectual property laws. You may
-            not copy, reproduce, distribute, or create derivative works from the Content without our written permission.
-        </p>
-    </div>
+        <div class="section">
+            <h2 data-i18n="virtualGoodsHeading">3. Virtual Goods and Currency</h2>
+            <p data-i18n="virtualGoodsParagraph">The App may include virtual goods or in-game currency ("Virtual
+                Currency"). Virtual Currency has no real-world value and cannot be exchanged for fiat currency or other
+                real-world items. All sales of Virtual Currency or items are final, and we do not provide refunds,
+                unless required by law.</p>
+        </div>
 
-    <div class="section">
-        <h2>6. Limitation of Liability</h2>
-        <p>QuizConq is provided "as is" and "as available". We do not guarantee that the App will be free of errors,
-            bugs, or interruptions. We are not liable for any direct, indirect, incidental, or consequential damages
-            resulting from your use of the App.</p>
-    </div>
+        <div class="section">
+            <h2 data-i18n="advertisingHeading">4. Advertising and Content</h2>
+            <p data-i18n="advertisingParagraph">QuizConq is a free-to-play game supported by advertising via Google
+                AdMob. By using the App, you consent to the display of these advertisements. We do our best to ensure
+                ads are appropriate, but we are not responsible for the content, accuracy, or products offered by
+                third-party advertisers.</p>
+        </div>
 
-    <div class="section">
-        <h2>7. Changes to Terms</h2>
-        <p>We reserve the right to modify these Terms of Service at any time. Significant changes will be communicated
-            through an update in the App or via the email linked to your account. Your continued use of the App after
-            modifications constitutes your acceptance of the revised Terms.</p>
-    </div>
+        <div class="section">
+            <h2 data-i18n="intellectualPropertyHeading">5. Intellectual Property</h2>
+            <p data-i18n="intellectualPropertyParagraph">All content within QuizConq, including texts, graphics, user
+                interfaces, sounds, and code (collectively, "Content"), is owned or licensed by us and is protected by
+                copyright and intellectual property laws. You may not copy, reproduce, distribute, or create derivative
+                works from the Content without our written permission.</p>
+        </div>
 
-    <div class="section">
-        <h2>8. Contact Information</h2>
-        <p>For any questions or concerns regarding these Terms of Service, please contact us at: hsyn.ekn@gmail.com</p>
-    </div>
+        <div class="section">
+            <h2 data-i18n="liabilityHeading">6. Limitation of Liability</h2>
+            <p data-i18n="liabilityParagraph">QuizConq is provided "as is" and "as available". We do not guarantee
+                that the App will be free of errors, bugs, or interruptions. We are not liable for any direct, indirect,
+                incidental, or consequential damages resulting from your use of the App.</p>
+        </div>
+
+        <div class="section">
+            <h2 data-i18n="changesHeading">7. Changes to Terms</h2>
+            <p data-i18n="changesParagraph">We reserve the right to modify these Terms of Service at any time.
+                Significant changes will be communicated through an update in the App or via the email linked to your
+                account. Your continued use of the App after modifications constitutes your acceptance of the revised
+                Terms.</p>
+        </div>
+
+        <div class="section">
+            <h2 data-i18n="contactHeading">8. Contact Information</h2>
+            <p><span data-i18n="contactParagraph">For any questions or concerns regarding these Terms of Service,
+                    please contact us at:</span> <a href="mailto:hsyn.ekn@gmail.com">hsyn.ekn@gmail.com</a></p>
+        </div>
+    </main>
+
+    <script>
+        const translations = {
+            en: {
+                documentTitle: 'Terms of Service - QuizConq',
+                switcherLabel: 'Language selection',
+                pageHeading: 'Terms of Service for QuizConq',
+                lastUpdated: 'Last Updated: February 2026',
+                intro: 'Welcome to QuizConq. By downloading, accessing, or using our mobile application (the "App"), you agree to the following Terms of Service. If you do not agree with any part of these terms, please refrain from using the App.',
+                accountsHeading: '1. User Accounts',
+                accountsParagraph1: 'To access certain features of QuizConq, such as saving progress, multiplayer modes, and leaderboards, you may need to register an account using Apple Sign-In or Google Sign-In.',
+                accountsParagraph2: 'You agree to provide accurate and complete information and keep it up to date. You are solely responsible for maintaining the confidentiality of your account credentials. We are not liable for any unauthorized access to your account.',
+                acceptableUseHeading: '2. Acceptable Use Policy',
+                acceptableUseIntro: 'While playing QuizConq, you agree NOT to:',
+                acceptableUseItem1: 'Use any cheats, hacks, automation software (bots), or unauthorized third-party software designed to modify or interfere with the App.',
+                acceptableUseItem2: 'Harass, threaten, or abuse other players.',
+                acceptableUseItem3: 'Use offensive, discriminatory, or inappropriate user names.',
+                acceptableUseItem4: 'Exploit bugs or glitches to gain an unfair advantage in gameplay.',
+                acceptableUseClosing: 'We reserve the right to suspend or terminate accounts that violate these rules without prior warning.',
+                virtualGoodsHeading: '3. Virtual Goods and Currency',
+                virtualGoodsParagraph: 'The App may include virtual goods or in-game currency ("Virtual Currency"). Virtual Currency has no real-world value and cannot be exchanged for fiat currency or other real-world items. All sales of Virtual Currency or items are final, and we do not provide refunds, unless required by law.',
+                advertisingHeading: '4. Advertising and Content',
+                advertisingParagraph: 'QuizConq is a free-to-play game supported by advertising via Google AdMob. By using the App, you consent to the display of these advertisements. We do our best to ensure ads are appropriate, but we are not responsible for the content, accuracy, or products offered by third-party advertisers.',
+                intellectualPropertyHeading: '5. Intellectual Property',
+                intellectualPropertyParagraph: 'All content within QuizConq, including texts, graphics, user interfaces, sounds, and code (collectively, "Content"), is owned or licensed by us and is protected by copyright and intellectual property laws. You may not copy, reproduce, distribute, or create derivative works from the Content without our written permission.',
+                liabilityHeading: '6. Limitation of Liability',
+                liabilityParagraph: 'QuizConq is provided "as is" and "as available". We do not guarantee that the App will be free of errors, bugs, or interruptions. We are not liable for any direct, indirect, incidental, or consequential damages resulting from your use of the App.',
+                changesHeading: '7. Changes to Terms',
+                changesParagraph: 'We reserve the right to modify these Terms of Service at any time. Significant changes will be communicated through an update in the App or via the email linked to your account. Your continued use of the App after modifications constitutes your acceptance of the revised Terms.',
+                contactHeading: '8. Contact Information',
+                contactParagraph: 'For any questions or concerns regarding these Terms of Service, please contact us at:'
+            },
+            tr: {
+                documentTitle: 'Hizmet Şartları - QuizConq',
+                switcherLabel: 'Dil seçimi',
+                pageHeading: 'QuizConq Hizmet Şartları',
+                lastUpdated: 'Son Güncelleme: Şubat 2026',
+                intro: 'QuizConq’a hoş geldiniz. Mobil uygulamamızı ("Uygulama") indirerek, uygulamaya erişerek veya uygulamayı kullanarak aşağıdaki Hizmet Şartları’nı kabul etmiş olursunuz. Bu şartların herhangi bir bölümünü kabul etmiyorsanız lütfen Uygulamayı kullanmayın.',
+                accountsHeading: '1. Kullanıcı Hesapları',
+                accountsParagraph1: 'İlerlemenin kaydedilmesi, çok oyunculu modlar ve liderlik tabloları gibi QuizConq özelliklerinden bazılarına erişebilmek için Apple ile Giriş veya Google ile Giriş yöntemlerini kullanarak bir hesap oluşturmanız gerekebilir.',
+                accountsParagraph2: 'Doğru ve eksiksiz bilgi sağlamayı ve bu bilgileri güncel tutmayı kabul edersiniz. Hesap bilgilerinizin gizliliğini korumaktan yalnızca siz sorumlusunuz. Hesabınıza izinsiz erişilmesinden sorumlu değiliz.',
+                acceptableUseHeading: '2. Kabul Edilebilir Kullanım Politikası',
+                acceptableUseIntro: 'QuizConq oynarken aşağıdaki davranışlarda BULUNMAMAYI kabul edersiniz:',
+                acceptableUseItem1: 'Uygulamayı değiştirmek veya işleyişine müdahale etmek amacıyla tasarlanmış hileleri, hack araçlarını, otomasyon yazılımlarını (botları) ya da yetkisiz üçüncü taraf yazılımlarını kullanmak.',
+                acceptableUseItem2: 'Diğer oyuncuları taciz etmek, tehdit etmek veya onlara kötü davranmak.',
+                acceptableUseItem3: 'Hakaret içeren, ayrımcı veya uygunsuz kullanıcı adları kullanmak.',
+                acceptableUseItem4: 'Oyunda haksız avantaj elde etmek için hata veya açıklardan yararlanmak.',
+                acceptableUseClosing: 'Bu kuralları ihlal eden hesapları önceden bildirimde bulunmaksızın askıya alma veya sonlandırma hakkımızı saklı tutarız.',
+                virtualGoodsHeading: '3. Sanal Ürünler ve Para Birimi',
+                virtualGoodsParagraph: 'Uygulama, sanal ürünler veya oyun içi para birimi ("Sanal Para") içerebilir. Sanal Para’nın gerçek dünyada herhangi bir değeri yoktur ve itibari para birimleriyle veya gerçek dünyadaki diğer ürünlerle değiştirilemez. Yasaların zorunlu kıldığı durumlar dışında, Sanal Para ve sanal ürün satışlarının tamamı kesindir ve geri ödeme yapılmaz.',
+                advertisingHeading: '4. Reklamlar ve İçerik',
+                advertisingParagraph: 'QuizConq, Google AdMob aracılığıyla gösterilen reklamlarla desteklenen ücretsiz bir oyundur. Uygulamayı kullanarak bu reklamların gösterilmesini kabul etmiş olursunuz. Reklamların uygun olmasını sağlamak için çaba göstersek de üçüncü taraf reklamverenlerin sunduğu içeriklerden, bilgilerin doğruluğundan veya ürünlerden sorumlu değiliz.',
+                intellectualPropertyHeading: '5. Fikri Mülkiyet',
+                intellectualPropertyParagraph: 'QuizConq içindeki metinler, grafikler, kullanıcı arayüzleri, sesler ve kodlar dâhil olmak üzere tüm içerikler (birlikte "İçerik"), bize aittir veya tarafımızca lisanslanmıştır ve telif hakkı ile fikri mülkiyet yasaları kapsamında korunmaktadır. Yazılı iznimiz olmadan İçeriği kopyalayamaz, çoğaltamaz, dağıtamaz veya İçerikten türetilmiş çalışmalar oluşturamazsınız.',
+                liabilityHeading: '6. Sorumluluğun Sınırlandırılması',
+                liabilityParagraph: 'QuizConq, "olduğu gibi" ve "mevcut olduğu ölçüde" sunulmaktadır. Uygulamanın hata, yazılım kusuru veya kesinti içermeyeceğini garanti etmeyiz. Uygulamayı kullanmanızdan kaynaklanan doğrudan, dolaylı, arızi veya sonuç olarak ortaya çıkan zararlardan sorumlu değiliz.',
+                changesHeading: '7. Şartlarda Değişiklik',
+                changesParagraph: 'Bu Hizmet Şartları’nı herhangi bir zamanda değiştirme hakkımızı saklı tutarız. Önemli değişiklikler, Uygulama içindeki bir güncelleme veya hesabınıza bağlı e-posta adresi üzerinden bildirilecektir. Değişikliklerden sonra Uygulamayı kullanmaya devam etmeniz, güncellenmiş şartları kabul ettiğiniz anlamına gelir.',
+                contactHeading: '8. İletişim Bilgileri',
+                contactParagraph: 'Bu Hizmet Şartları hakkında soru veya endişeleriniz için bizimle şu adresten iletişime geçebilirsiniz:'
+            }
+        };
+
+        const languageButtons = document.querySelectorAll('.language-button');
+        const translatableElements = document.querySelectorAll('[data-i18n]');
+        const switcher = document.querySelector('.language-switcher');
+
+        function setLanguage(language) {
+            const selectedLanguage = translations[language] ? language : 'en';
+            const selectedTranslations = translations[selectedLanguage];
+
+            document.documentElement.lang = selectedLanguage;
+            document.title = selectedTranslations.documentTitle;
+            switcher.setAttribute('aria-label', selectedTranslations.switcherLabel);
+
+            translatableElements.forEach((element) => {
+                const key = element.dataset.i18n;
+                if (selectedTranslations[key]) {
+                    element.textContent = selectedTranslations[key];
+                }
+            });
+
+            languageButtons.forEach((button) => {
+                const isActive = button.dataset.language === selectedLanguage;
+                button.classList.toggle('active', isActive);
+                button.setAttribute('aria-pressed', String(isActive));
+            });
+
+            localStorage.setItem('quizconq-terms-language', selectedLanguage);
+        }
+
+        languageButtons.forEach((button) => {
+            button.addEventListener('click', () => setLanguage(button.dataset.language));
+        });
+
+        const savedLanguage = localStorage.getItem('quizconq-terms-language');
+        const browserLanguage = navigator.language.toLowerCase().startsWith('tr') ? 'tr' : 'en';
+        setLanguage(savedLanguage || browserLanguage);
+    </script>
 </body>
 
 </html>
